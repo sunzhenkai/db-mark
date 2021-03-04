@@ -1,2 +1,7 @@
 db:
   type: redis 
+
+redis:
+  addr: "127.0.0.1:5000"
+  passwd: ""
+  
