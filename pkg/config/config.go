@@ -2,8 +2,12 @@ package config
 
 // Config for mark
 type Config interface {
-	GetStringSize() int32
-	GetListSize() int32
-	GetMapSize() int32
-	GetLoopNum() int32
+	// generator
+	GetStringSize() int
+	GetListSize() int
+	GetMapSize() int
+
+	// benchmark
+	GetLoopNum() int
+	GetDataItemSize() int
 }

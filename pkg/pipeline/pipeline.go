@@ -20,3 +20,7 @@ func (p Pipeline) prepare() {
 func (p Pipeline) process() {
 	// process
 }
+
+func (p Pipeline) quit() {
+	// quit
+}
