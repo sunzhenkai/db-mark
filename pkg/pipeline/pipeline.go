@@ -14,7 +14,7 @@ type Pipeline struct {
 }
 
 func (p Pipeline) prepare() {
-	// prepare
+
 }
 
 func (p Pipeline) process() {
@@ -23,4 +23,10 @@ func (p Pipeline) process() {
 
 func (p Pipeline) quit() {
 	// quit
+}
+
+func (p Pipeline) Do() {
+	p.prepare()
+	p.process()
+	p.quit()
 }

@@ -1,6 +1,6 @@
 package data
 
-// Data store parepared data
+// Data store prepared data
 type Data struct {
 	StringList []string
 	ListList   [][]string

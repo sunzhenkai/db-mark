@@ -19,6 +19,6 @@ func ReadConfig(pt string) {
 	err := viper.ReadInConfig()
 
 	if err != nil {
-		panic(fmt.Errorf("Fatal error occurred while read config : %s", err))
+		panic(fmt.Errorf("fatal error occurred while read config : %s", err))
 	}
 }

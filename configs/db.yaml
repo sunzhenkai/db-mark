@@ -1,7 +1,12 @@
 db:
-  type: redis 
+  type: redis
 
 redis:
   addr: "127.0.0.1:5000"
   passwd: ""
+
+bench:
+  loop: 10000
+  data:
+    string-size: 10000
   

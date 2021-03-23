@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/sunzhenkai/db-mark/pkg/config"
-	"github.com/sunzhenkai/db-mark/test/basic"
+	"github.com/sunzhenkai/db-mark/pkg/pipeline"
 )
 
 func main() {
@@ -15,6 +15,7 @@ func main() {
 	fmt.Printf("db.type \t: %s \n", viper.Get("db.type"))
 	fmt.Printf("db.max.qps \t: %d \n", viper.GetInt("db.max.qps"))
 
-	// test
-	basic.DoTest()
+	// run pipeline
+	p := pipeline.Pipeline{}
+	p.Do()
 }
