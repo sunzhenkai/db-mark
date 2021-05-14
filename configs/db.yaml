@@ -7,7 +7,7 @@ redis:
   passwd: ""
 
 bench:
-  loop: 100000000
+  loop: 100000
   data:
     string-size: 10
     string-list-size: 1000
