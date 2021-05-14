@@ -2,19 +2,19 @@ package config
 
 import "github.com/spf13/viper"
 
-// config for mark
-type config interface {
-	// generator
+// Config config for mark
+type Config interface {
+	// GetStringSize generator
 	GetStringSize() int
 	GetListSize() int
 	GetMapSize() int
 
-	// benchmark
+	// GetLoopNum benchmark
 	GetLoopNum() int
 	GetDataItemSize() int
 }
 
-// ConfigImpl config impl
+// Impl ConfigImpl config impl
 type Impl struct {
 	stringSize   int
 	listSize     int
@@ -43,9 +43,10 @@ func (c Impl) GetDataItemSize() int {
 	return c.dataItemSize
 }
 
-func GenConfig() config {
+func GenConfig() Config {
 	var stringSize = viper.GetInt("bench.data.string-size")
+	var stringListSize = viper.GetInt("bench.data.string-list-size")
 	var loop = viper.GetInt("bench.loop")
-	var cfg config = Impl{stringSize: stringSize, loopNum: loop}
+	var cfg Config = Impl{stringSize: stringSize, loopNum: loop, listSize: stringListSize}
 	return cfg
 }

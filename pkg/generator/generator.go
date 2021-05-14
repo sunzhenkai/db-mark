@@ -6,13 +6,13 @@ import (
 	"github.com/sunzhenkai/db-mark/pkg/rand"
 )
 
-func GenString(cfg config.Config) data.Data {
+func GenData(cfg config.Config) *data.Data {
 	n := cfg.GetStringSize()
 	var dt = data.Data{}
 
 	for i := 0; i < n; i++ {
-		append(dt.StringList, rand.RandomString(cfg.GetDataItemSize()))
+		dt.StringList = append(dt.StringList, rand.RandomString(cfg.GetListSize()))
 	}
 
-	return dt
+	return &dt
 }

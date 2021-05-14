@@ -16,6 +16,7 @@ func main() {
 	fmt.Printf("db.max.qps \t: %d \n", viper.GetInt("db.max.qps"))
 
 	// run pipeline
-	p := pipeline.Pipeline{}
+	//p := *pipeline.NewPipeline()
+	p := pipeline.NewPipeline()
 	p.Do()
 }
