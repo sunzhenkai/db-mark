@@ -2,12 +2,14 @@ db:
   type: redis
 
 redis:
-  addr: "127.0.0.1:5000"
+  host: "127.0.0.1"
+  port: "6379"
   passwd: ""
 
 bench:
-  loop: 10
+  loop: 100000000
   data:
     string-size: 10
-    string-list-size: 100
+    string-list-size: 1000
+    key-size: 100
   
